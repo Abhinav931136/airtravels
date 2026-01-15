@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16757396225"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-16757396225'); </script>
+    <title>SkyZen Tours & Travels - Get in Touch</title>
+    <!-- Favicon -->
+    <link href="img/LOGOF.png" rel="icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+  gtag('event', 'conversion', {'send_to': 'AW-16757396225/vmmOCIz3_-4ZEIGmxrY-'});
+</script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* For positioning the airplanes */
+            overflow: hidden; /* Prevent scroll due to animation */
+            background-image: url('https://www.bing.com/th/id/OGC.ea456491a6ebd5838753aabd1d0e47c1?pid=1.7&rurl=https%3a%2f%2fcdn.dribbble.com%2fusers%2f846207%2fscreenshots%2f7617197%2fmedia%2fe87a923768846bc12f00539d66e80931.gif&ehk=3%2fKVehzKm%2fYwlUrH4%2bCgJvTqKVBjSB2YsQ29DvKB4Oc%3d'); /* Use your full-size airplane image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            height: 100vh; /* Full viewport height */}
+        /* Popup container style */
+        #callModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for full screen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Popup content style with black background */
+        .popup-content {
+            max-width: 500px;
+            padding: 20px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+         /* Add semi-transparent overlay on content */
+        .popup-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            border-radius: 15px;
+            z-index: 1;
+        }
+
+        /* Text styling */
+        .popup-content h2, .popup-content p, .popup-content a {
+            position: relative;
+            z-index: 2; /* Bring text above overlay */
+        }
+
+        .popup-content h2 {
+            font-size: 30px;
+            color: #ffeb3b; /* Bright yellow color */
+            margin-bottom: 10px;
+        }
+
+        .popup-content p {
+            font-size: 18px;
+            color: #ffffff; /* White text for visibility */
+            margin-bottom: 20px;
+        }
+         /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #ffeb3b; /* Bright yellow */
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 2;
+        }
+
+        /* Register button */
+        .register-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722; /* Bright button color */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        /* Fade-out animation */
+        .fade-out {
+            opacity: 3;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id="callModal">
+    <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">✖</button>
+        <h2>Contact Dream Travels</h2>
+        <p>Get your flight in one minute! Call us now for immediate assistance.</p>
+        <a href="tel:+1 18007166253" class="register-btn">Call Now</a>
+    </div>
+</div>
+
+<script>
+    // Function to close the popup
+    function closePopup() {
+        const popup = document.getElementById('callModal');
+        popup.classList.add('fade-out');
+        setTimeout(() => popup.style.display = 'none', 300); // Hide after animation
+    }
+
+    // Auto-show popup on page load
+    window.onload = function() {
+        document.getElementById('callModal').style.display = 'flex';
+    }
+</script>
+    
+</body>
+</html>

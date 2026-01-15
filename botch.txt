@@ -1,0 +1,150 @@
+<div id="travel-chatbot-widget">
+    <div id="chatbot-header" onclick="toggleChatbot()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmWVR2S4RTC5-5S041FLiKjZpc2N62gnYZQ&s" alt="Bot Avatar" class="chatbot-avatar-head">
+        DreamBot – Trip Planner
+        <span class="chatbot-status-online">● Online</span>
+    </div>
+    <div id="chatbot-body" style="display:none;">
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-bar">
+            <input type="text" id="chatbot-input" placeholder="Ask for itinerary or best places..." autocomplete="off">
+            <button onclick="sendChatbotMessage()" id="send-btn">
+                <svg height="24" width="24" viewBox="0 0 24 24" fill="#43d854">
+                    <path d="M2.01 21L23 12 2.01 3v7l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<style>
+#travel-chatbot-widget {
+    position: fixed; bottom: 22px; right: 22px; z-index: 9999;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+#chatbot-header {
+    background: linear-gradient(90deg, #43d854 50%, #0056b3 100%);
+    color: #fff; padding: 11px 18px; font-weight: 500;
+    border-top-left-radius: 16px; border-top-right-radius: 16px;
+    cursor: pointer; font-size: 17px; display: flex; 
+    align-items: center; gap: 13px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.chatbot-avatar-head { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #fff; }
+.chatbot-status-online {font-size:13px; margin-left:auto; color:#baffc2;}
+#chatbot-body {
+    min-width: 360px; max-width: 400px; max-height: 475px; background: #f7f9fc;
+    border-radius: 0 0 17px 17px; box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    padding: 7px 0 10px 0; display: flex; flex-direction: column;
+}
+#chatbot-messages {
+    flex: 1 1 auto; overflow-y: auto; padding: 18px 17px;
+    font-size: 15px; max-height: 370px; background:#f7f9fc;
+}
+#chatbot-input-bar {
+    display: flex; padding: 10px 16px 8px 16px; border-top: 1px solid #eaeaea;
+    background: #eafcf0; border-radius: 0 0 17px 17px;
+}
+#chatbot-input { flex: 1 1 auto; padding: 11px 14px; border-radius: 19px; border: 1.6px solid #9de9b2; font-size:15px;}
+#chatbot-input:focus { outline: none; border-color: #43d854; }
+#send-btn {
+    background: none; border: none; cursor: pointer; margin-left: 8px;
+    height: 42px; width: 46px; display:flex; align-items:center; justify-content:center;
+    border-radius: 50%; transition: background .2s;
+}
+#send-btn:hover{background:#43d85423;}
+.user-msg, .bot-msg {
+    max-width: 80%; display: flex; align-items: flex-end; margin: 10px 0;
+}
+.user-msg { justify-content: flex-end; }
+.bot-msg { justify-content: flex-start; }
+.user-msg .msg-bubble, .bot-msg .msg-bubble {
+    padding: 12px 18px; font-size:15px; border-radius: 22px; word-break:break-word;
+    box-shadow:0 2px 8px rgba(67,216,84,0.07);
+}
+.user-msg .msg-bubble {
+    background: linear-gradient(90deg,#43d854 67%,#80ffd1 100%);
+    color: #fff; margin-left:auto;
+}
+.bot-msg .msg-bubble {
+    background: #fff; color:#0056b3; margin-right:auto; border: 1.2px solid #43d85422; position:relative;
+}
+.bot-avatar {width: 28px; height: 28px; border-radius:50%;margin-right:8px; border: 1.6px solid #9de9b2;}
+@media (max-width: 480px) {
+    #chatbot-body {min-width:95vw; max-width:97vw;}
+}
+</style>
+<script>
+// Modern Chatbot Script
+function toggleChatbot() {
+    let el = document.getElementById('chatbot-body');
+    el.style.display = (el.style.display === "none" || !el.style.display) ? "flex" : "none";
+    if(el.style.display === "flex" && !window.greetedBot) { runBotGreeting(); window.greetedBot=true;}
+}
+// Greeting and Ask
+function runBotGreeting(){
+    setTimeout(function(){
+        appendChatMessage('bot', "👋 Hi, I'm DreamBot! Where are you planning to travel? Just enter the city or destination and I'll suggest the best itinerary and top places. 🙌");
+    },400);
+}
+function sendChatbotMessage() {
+    let input = document.getElementById('chatbot-input');
+    let text = input.value.trim();
+    if (!text) return;
+
+    appendChatMessage('user', text);
+    input.value = '';
+
+    // Show loading state and capture the element reference
+    let loadingElement = appendChatMessage('bot', '...');
+
+    fetch('https://tech.interndesire.com/chat.php', {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ message: text })
+    })
+    .then(res => res.json())
+    .then(data => {
+        // Remove loading message using the captured reference
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+        appendChatMessage('bot', data.reply);
+    })
+    .catch(error => {
+        // Handle network/fetch errors (like the CORS/403 block)
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+        console.error('Fetch error:', error);
+        appendChatMessage('bot', "❌ Network Error: Could not reach the server (Check groq-ai-chat.php access).");
+    });
+}
+function appendChatMessage(role, text) {
+    let messagesContainer = document.getElementById('chatbot-messages');
+    let msg = document.createElement('div');
+    msg.className = (role === 'user' ? 'user-msg' : 'bot-msg');
+
+    let bubble = document.createElement('div');
+    bubble.className = 'msg-bubble';
+    bubble.textContent = text;
+    
+    if(role==='bot'){
+        let botAvatar = document.createElement('img');
+        botAvatar.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmWVR2S4RTC5-5S041FLiKjZpc2N62gnYZQ&s"; 
+        botAvatar.alt = "Bot Avatar"; 
+        botAvatar.className = 'bot-avatar';
+        msg.appendChild(botAvatar);
+    }
+    
+    msg.appendChild(bubble);
+    messagesContainer.appendChild(msg);
+
+    // Auto-scroll to bottom
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    // Return the message element for later manipulation (like removing the '...' loading state)
+    return msg; 
+}
+document.getElementById('chatbot-input').addEventListener('keydown', function(e){
+    if(e.key === "Enter") sendChatbotMessage();
+});
+</script>

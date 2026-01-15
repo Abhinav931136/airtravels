@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>about</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16757396225">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16757396225');
+    </script>
+
+    <style>
+
+/* Call-to-Action Button */
+.cta-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #4eacf4;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 4px solid #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  background-color: #00dddd00;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* About Us Section */
+.about-us {
+  padding: 60px 20px;
+  overflow: hidden; /* Prevent content overflow during animations */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Text Content */
+.about-content {
+  flex: 1 1 50%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0c2e48;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #4eacf4;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Image Content */
+.about-image {
+  flex: 1 1 40%;
+  max-width: 500px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Active State */
+.about-content.active,
+.about-image.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0c2e48;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.testimonial-header h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #4eacf4;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+
+/* Testimonial Container */
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.testimonial-item {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  max-width: 350px;
+  min-height: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.testimonial-item p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.testimonial-item h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4eacf4;
+  margin-top: 10px;
+}
+
+.testimonial-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.testimonial-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.testimonial-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-item {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/LOGO.webp" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Dream Travels</h1>
+        <p>Discover who we are and what drives us to provide exceptional travel experiences.</p>
+        <a href="#about" class="cta-btn">Learn More About Us</a>
+      </div>
+    </section>
+    
+    <section class="about-us">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>At Dream Travels, our goal is to provide you with an unforgettable travel experience. We are dedicated to offering personalized services and expert travel advice to ensure your journey is smooth and enjoyable.</p>
+          <p>From exotic destinations to relaxing retreats, our team works tirelessly to craft the perfect itinerary that suits your needs and preferences. Explore the world with confidence and make memories that last a lifetime with us.</p>
+        </div>
+        <div class="about-image">
+          <img src="./img/about.webp" alt="Travel Experience" />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial-header">
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonial-container">
+        <div class="testimonial-item">
+          <p>"Dream Travels provided an unforgettable experience. Everything was well-organized and exceeded our expectations!"</p>
+          <h4>– Sarah Johnson</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"The team went above and beyond to accommodate our needs. Highly recommend for stress-free travel planning."</p>
+          <h4>– Mark Anderson</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"Amazing service, incredible destinations, and top-notch support from start to finish."</p>
+          <h4>– Lisa Walker</h4>
+        </div>
+      </div>
+    </section>
+    
+
+    
+
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo-section">
+        <img src="img/LOGOF.webp" alt="Logo" class="footer-logo">
+        <p>&copy; 2025 Dream Travels. All Rights Reserved.</p>
+      </div>
+  
+      <div class="footer-info">
+        <h3>Contact Us</h3>
+        <!--<p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+118007166253">+1 18007166253</a>
+        </p>-->
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:support@dreamtravels.com">support@dreamtravels.com</a>
+        </p>
+        <!--<p>
+          <i class="fas fa-map-marker-alt"></i>
+          30 N GOULD St Ste R, Sheridan, WY 82801
+        </p>-->
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="policy.html">Privacy Policy</a>
+      </div>
+  
+      <div class="footer-cta">
+        <a href="getcall.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const aboutSection = document.querySelector(".about-us");
+  const aboutContent = document.querySelector(".about-content");
+  const aboutImage = document.querySelector(".about-image");
+
+  const onScroll = () => {
+    const sectionTop = aboutSection.getBoundingClientRect().top;
+    const sectionHeight = aboutSection.offsetHeight;
+    const triggerPoint = window.innerHeight - sectionHeight / 4;
+
+    if (sectionTop < triggerPoint) {
+      aboutContent.classList.add("active");
+      aboutImage.classList.add("active");
+    }
+  };
+
+  window.addEventListener("scroll", onScroll);
+});
+
+</script>
+</html>

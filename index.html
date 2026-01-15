@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Keywords-->
+    <meta name="keywords" content="Cheap flights, Airline tickets, Flight booking, Low-cost flights, Air travel deals, International flights, Domestic flights, Discounted airfares, Last-minute flights, Round trip tickets, One-way flights, Business class flights, Economy class tickets, Airline promotions, Flight offers, Best airline deals, Budget airlines, Vacation packages, Airline reservations, Airfare comparison, Flight schedules, Direct flights, Connecting flights, Flight search engine, Online flight booking, Top airline services, Non-stop flights, Affordable flights, Airline seat selection, Cheap flight finder, Holiday flights, Air travel discounts, Flight check-in online, Flexible flight dates, Family travel deals, Weekend flights, Student travel discounts, Last-minute airfare, Airline loyalty programs, Multi-city flights, Flight upgrades, Special flight fares, Airline baggage policy, International travel offers, Airline holiday packages, Early bird flight deals, Cheapest airlines, Air travel tips, Top airlines, Airline routes, Vacation flight offers, Travel flight deals, Airline customer service, Group travel flights, Popular flight routes, Flight ticket discounts, Best airfare prices, Airline promotions 2024, Vacation travel offers, Exclusive flight offers, Frequent flyer programs, Flight cancellations, Travel insurance for flights, Last-minute travel deals, Low-cost carrier airlines, Airport lounge access, Travel apps for flight bookings, Flight price alerts, Seasonal flight deals, Travel rewards programs, Round-the-world tickets, Premium economy flights, Flight charter services, Pet travel policies, Airline check-in options, Flight layover tips, Travel hacks for flights, Student airfare discounts, Corporate travel bookings, Group discounts on flights">
+    <meta name="description" content="Dream Travels offers unforgettable journeys that blend adventure, comfort, and cultural exploration for every traveller.">
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16757396225"></script>
+    <script> 
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date()); gtag('config', 'AW-16757396225'); 
+    </script>
+
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home</title>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dreamtravels.com"
+          },
+          "headline": "Dream Travels",
+          "description": "Dream Travels offers unforgettable journeys that blend adventure, comfort, and cultural exploration for every traveller.",
+          "image": {
+            "@type": "ImageObject",
+            "url": "",
+            "width": "",
+            "height": ""
+          },
+          "author": {
+            "@type": "Person",
+            "name": ""
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "",
+              "width": "",
+              "height": ""
+            }
+          },
+          "datePublished": ""
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+    <!-- Flatpicker calander -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16757396225">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16757396225');
+    </script>
+
+
+    <style>
+
+/* General Form Styles */
+.sky_body label{
+  text-align: left;
+}
+
+.form-body {
+    background: rgba(255, 255, 255, 0.0);
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+.form_top,.trip_location,.trip_length{
+    display: flex;
+    gap: 2rem;
+}
+
+/* Traveller Dropdown */
+.traveller-dropdown {
+    position: relative;
+}
+
+.traveller-dropdown input[type="text"] {
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+.half{
+    width: 50%;
+    position: relative;
+}
+.dropdown-content {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.counter-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.counter-btn:hover {
+    background: #0056b3;
+}
+
+.counter input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    background: #f9f9f9;
+    font-size: 16px;
+    margin: 0 5px;
+    pointer-events: none;
+}
+
+.done-btn {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.done-btn:hover {
+    background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-body {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        width: 100%;
+    }
+}
+
+
+/*Locations*/
+.destinations{
+    margin: 40px 0;
+}
+
+.destination-container h2{
+    text-align: center;
+    color: #0c2e48;
+    position: relative;
+}
+.destination-container h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #4eacf4;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+        
+.card-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+margin: 20px;
+}
+
+.card-row {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.card {
+position: relative;
+width: 200px;
+height: 150px;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card-text {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 10px;
+background: rgba(0, 0, 0, 0.5);
+color: #fff;
+text-align: center;
+font-weight: bold;
+font-size: 14px;
+}
+
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.card {
+    width: 150px;
+    height: 100px;
+}
+}
+
+@media (max-width: 480px) {
+.card-row {
+    flex-direction: column;
+    align-items: center;
+}
+}
+.faq-section {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 20px;
+  background-color: #e9f7f9;
+  border-radius: 10px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #0c2e48;
+  margin-bottom: 40px;
+}
+
+.faq-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #4eacf4;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* FAQ item styling */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.faq-question:hover {
+  background-color: #e0f7fa;
+}
+
+.faq-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  display: none;
+}
+
+/* Show answer when expanded */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .faq-section {
+      padding: 10px;
+  }
+
+  .faq-question {
+      font-size: 14px;
+  }
+
+  .faq-answer {
+      font-size: 13px;
+  }
+}
+
+/* Styles for the UL element */
+.from,.to {
+    position: absolute;
+    z-index: 10;
+    color: #000000;
+    list-style-type: none; 
+    margin: 0;           
+    padding: 0;           
+    max-height: 200px;    
+    overflow-y: auto;     
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc;    
+    border-radius: 4px;       
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for each list item inside the UL */
+ul li {
+    padding: 8px 12px;   
+    cursor: pointer;      
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect for list items */
+ul li:hover {
+    background-color: #e0e0e0;
+}
+
+    </style>
+</head>
+<body>
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/LOGO.webp" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    <!--hero Section-->
+    <hero class="sky_body">
+        <div class="fluid-container herocenter">
+            <div class="header-image"></div>
+            <div class="form-body">
+                <h1>Search Flights</h1>
+                <p>Enjoy hassle-free flight ticket bookings at the lowest airfare</p>
+                <form action="api.php" method="POST" class="booking-form">
+                    <!-- Trip Type Section -->
+                    <div class="form_top">
+                        <div class="form-group half">
+                            <label for="trip-type">Trip Type</label>
+                            <select id="trip-type" name="trip-type" onchange="toggleReturnDate()">
+                                <option value="one-way" selected>One Way</option>
+                                <option value="round-trip">Round Trip</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Travellers Section -->
+                        <div class="form-group half">
+                            <label for="travellers">Travellers</label>
+                            <div class="traveller-dropdown">
+                                <input type="text" id="travellers" placeholder="1 Adult" readonly onclick="toggleDropdown()">
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <div class="counter-group">
+                                        <label>Adults</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" onclick="decreaseValue('adults-counter')">-</button>
+                                            <input type="number" id="adults-counter" name="adults" value="1" min="1" readonly>
+                                            <button type="button" class="counter-btn plus" onclick="increaseValue('adults-counter')">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="counter-group">
+                                        <label>Children</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" onclick="decreaseValue('children-counter')">-</button>
+                                            <input type="number" id="children-counter" name="children" value="0" min="0" readonly>
+                                            <button type="button" class="counter-btn plus" onclick="increaseValue('children-counter')">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="counter-group">
+                                        <label>Infants</label>
+                                        <div class="counter">
+                                            <button type="button" class="counter-btn minus" onclick="decreaseValue('infants-counter')">-</button>
+                                            <input type="number" id="infants-counter" name="infants" value="0" min="0" readonly>
+                                            <button type="button" class="counter-btn plus" onclick="increaseValue('infants-counter')">+</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="done-btn" onclick="updateTravellers()">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <!-- Location and Dates Section -->
+                    <div class="trip_location">
+                        <div class="form-group half">
+                            <label for="airport-search-from">From</label>
+                            <input type="text" id="airport-search-from" placeholder="Search airports..." name="airport-from">
+                            <ul id="airport-list-from" class="from" style="display: none;"></ul>
+                        </div>
+                        <div class="form-group half">
+                            <label for="airport-search-to">To</label>
+                            <input type="text" id="airport-search-to" placeholder="Search airports..." name="airport-to">
+                            <ul id="airport-list-to" class="to" style="display: none;"></ul>
+                        </div>
+                    </div>
+                    <div class="trip_length">
+                        <div class="form-group half">
+                            <label for="departing">Depart</label>
+                            <input type="date" id="departing" name="departing">
+                        </div>
+                        <div class="form-group half" id="return-date-group" style="display: none;">
+                            <label for="returning">Return</label>
+                            <input type="date" id="returning" name="returning">
+                        </div>
+                    </div>
+    
+                    <!-- Travel Class -->
+                    <div class="form-group">
+                        <label for="travel-class">Class</label>
+                        <select id="travel-class" name="travel-class">
+                            <option value="economy">Economy Class</option>
+                            <option value="premium_economy">Premium Economy Class</option>
+                            <option value="business">Business Class</option>
+                            <option value="first">First Class</option>
+                        </select>
+                    </div>
+    
+                    <!-- Submit Button -->
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </hero>
+    
+
+    <!--Locations-->
+
+    <section class="destinations">
+        <div class="destination-container">
+            <h2>Explore Beautiful Destinations</h2>
+            <div class="card-container">
+                <div class="card-row">
+                    <div class="card">
+                        <img src="img/castle_williams.webp" alt="Location 1">
+                        <div class="card-text">Castle_Williams</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/lyndhurst_mansion.webp" alt="Location 2">
+                        <div class="card-text">Lyndhurst_Mansion</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/pike_market.webp" alt="Location 3">
+                        <div class="card-text">Pike Market</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Kennedy_Space_Center.webp" alt="Location 4">
+                        <div class="card-text">Kennedy Space Center</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Florida_Keys.webp" alt="Location 5">
+                        <div class="card-text">Florida Keys</div>
+                    </div>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <img src="img/Niagara_Falls.webp" alt="Location 6">
+                        <div class="card-text">Niagra Falls</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/San_Francisco_11.webp" alt="Location 7">
+                        <div class="card-text">San Francisco</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Yellowstone.webp" alt="Location 8">
+                        <div class="card-text">Yellow Stone</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Grand_Canyon-1.webp" alt="Location 9">
+                        <div class="card-text">Grand Canyon</div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Manhattan-2.webp" alt="Location 10">
+                        <div class="card-text">Manhattan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FAQ Section-->
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is the cancellation policy? 
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Our cancellation policy allows you to cancel your flight up to 24 hours before departure for a full refund. For cancellations within 24 hours of departure, additional fees may apply.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I change my flight dates?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, you can change your flight dates subject to availability. Change fees may apply depending on the fare type.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I check my flight status? 
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    You can check your flight status on our website by entering your booking reference or flight number.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What documents do I need for check-in?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    You will need a valid government-issued photo ID and your flight ticket. For international flights, a valid passport and visa (if required) are necessary.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact Us-->
+<div class="contact-us-section">
+    <div class="contact-container">
+        <h3><i class="fas fa-envelope"></i> Contact Us</h3>
+        <p><i class="fas fa-info-circle"></i> Have questions? We're here to help. Reach out to us and we'll get back to you soon!</p>
+
+        <form class="contact-form home-form" action="message.php" method="POST">
+            <div class="form-left">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-pencil-alt"></i> Message</label>
+                        <textarea id="message" rows="4" name="message" placeholder="Write your message here" required></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Footer-->
+
+<footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo-section">
+        <img src="img/LOGOF.webp" alt="Logo" class="footer-logo">
+        <p>&copy; 2025 Dream Travels. All Rights Reserved.</p>
+      </div>
+  
+      <div class="footer-info">
+        <h3>Contact Us</h3>
+        <!--<p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+118007166253">+1 18007166253</a>
+        </p>-->
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:support@dreamtravels.com">support@dreamtravels.com</a>
+        </p>
+        <!--<p>
+          <i class="fas fa-map-marker-alt"></i>
+          30 N GOULD St Ste R, Sheridan, WY 82801
+        </p>-->
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="policy.html">Privacy Policy</a>
+      </div>
+  
+      <div class="footer-cta">
+        <a href="getcall.html" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </footer>
+<div id="travel-chatbot-widget">
+    <div id="chatbot-header" onclick="toggleChatbot()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmWVR2S4RTC5-5S041FLiKjZpc2N62gnYZQ&s" alt="Bot Avatar" class="chatbot-avatar-head">
+        DreamBot – Trip Planner
+        <span class="chatbot-status-online">● Online</span>
+    </div>
+    <div id="chatbot-body" style="display:none;">
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-bar">
+            <input type="text" id="chatbot-input" placeholder="Ask for itinerary or best places..." autocomplete="off">
+            <button onclick="sendChatbotMessage()" id="send-btn">
+                <svg height="24" width="24" viewBox="0 0 24 24" fill="#43d854">
+                    <path d="M2.01 21L23 12 2.01 3v7l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<style>
+#travel-chatbot-widget {
+    position: fixed; bottom: 22px; right: 22px; z-index: 9999;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+#chatbot-header {
+    background: linear-gradient(90deg, #43d854 50%, #0056b3 100%);
+    color: #fff; padding: 11px 18px; font-weight: 500;
+    border-top-left-radius: 16px; border-top-right-radius: 16px;
+    cursor: pointer; font-size: 17px; display: flex; 
+    align-items: center; gap: 13px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.chatbot-avatar-head { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #fff; }
+.chatbot-status-online {font-size:13px; margin-left:auto; color:#baffc2;}
+#chatbot-body {
+    min-width: 360px; max-width: 400px; max-height: 475px; background: #f7f9fc;
+    border-radius: 0 0 17px 17px; box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    padding: 7px 0 10px 0; display: flex; flex-direction: column;
+}
+#chatbot-messages {
+    flex: 1 1 auto; overflow-y: auto; padding: 18px 17px;
+    font-size: 15px; max-height: 370px; background:#f7f9fc;
+}
+#chatbot-input-bar {
+    display: flex; padding: 10px 16px 8px 16px; border-top: 1px solid #eaeaea;
+    background: #eafcf0; border-radius: 0 0 17px 17px;
+}
+#chatbot-input { flex: 1 1 auto; padding: 11px 14px; border-radius: 19px; border: 1.6px solid #9de9b2; font-size:15px;}
+#chatbot-input:focus { outline: none; border-color: #43d854; }
+#send-btn {
+    background: none; border: none; cursor: pointer; margin-left: 8px;
+    height: 42px; width: 46px; display:flex; align-items:center; justify-content:center;
+    border-radius: 50%; transition: background .2s;
+}
+#send-btn:hover{background:#43d85423;}
+.user-msg, .bot-msg {
+    max-width: 80%; display: flex; align-items: flex-end; margin: 10px 0;
+}
+.user-msg { justify-content: flex-end; }
+.bot-msg { justify-content: flex-start; }
+.user-msg .msg-bubble, .bot-msg .msg-bubble {
+    padding: 12px 18px; font-size:15px; border-radius: 22px; word-break:break-word;
+    box-shadow:0 2px 8px rgba(67,216,84,0.07);
+}
+.user-msg .msg-bubble {
+    background: linear-gradient(90deg,#43d854 67%,#80ffd1 100%);
+    color: #fff; margin-left:auto;
+}
+.bot-msg .msg-bubble {
+    background: #fff; color:#0056b3; margin-right:auto; border: 1.2px solid #43d85422; position:relative;
+}
+.bot-avatar {width: 28px; height: 28px; border-radius:50%;margin-right:8px; border: 1.6px solid #9de9b2;}
+@media (max-width: 480px) {
+    #chatbot-body {min-width:95vw; max-width:97vw;}
+}
+</style>
+<script>
+// Modern Chatbot Script
+function toggleChatbot() {
+    let el = document.getElementById('chatbot-body');
+    el.style.display = (el.style.display === "none" || !el.style.display) ? "flex" : "none";
+    if(el.style.display === "flex" && !window.greetedBot) { runBotGreeting(); window.greetedBot=true;}
+}
+// Greeting and Ask
+function runBotGreeting(){
+    setTimeout(function(){
+        appendChatMessage('bot', "👋 Hi, I'm DreamBot! Where are you planning to travel? Just enter the city or destination and I'll suggest the best itinerary and top places. 🙌");
+    },400);
+}
+function sendChatbotMessage() {
+    let input = document.getElementById('chatbot-input');
+    let text = input.value.trim();
+    if (!text) return;
+
+    appendChatMessage('user', text);
+    input.value = '';
+
+    // Show loading state and capture the element reference
+    let loadingElement = appendChatMessage('bot', '...');
+
+    fetch('https://tech.interndesire.com/chat.php', {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ message: text })
+    })
+    .then(res => res.json())
+    .then(data => {
+        // Remove loading message using the captured reference
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+        appendChatMessage('bot', data.reply);
+    })
+    .catch(error => {
+        // Handle network/fetch errors (like the CORS/403 block)
+        if (loadingElement) {
+            loadingElement.remove();
+        }
+        console.error('Fetch error:', error);
+        appendChatMessage('bot', "鉂� Network Error: Could not reach the server (Check groq-ai-chat.php access).");
+    });
+}
+function appendChatMessage(role, text) {
+    let messagesContainer = document.getElementById('chatbot-messages');
+    let msg = document.createElement('div');
+    msg.className = (role === 'user' ? 'user-msg' : 'bot-msg');
+
+    let bubble = document.createElement('div');
+    bubble.className = 'msg-bubble';
+    bubble.textContent = text;
+    
+    if(role==='bot'){
+        let botAvatar = document.createElement('img');
+        botAvatar.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmWVR2S4RTC5-5S041FLiKjZpc2N62gnYZQ&s"; 
+        botAvatar.alt = "Bot Avatar"; 
+        botAvatar.className = 'bot-avatar';
+        msg.appendChild(botAvatar);
+    }
+    
+    msg.appendChild(bubble);
+    messagesContainer.appendChild(msg);
+
+    // Auto-scroll to bottom
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    // Return the message element for later manipulation (like removing the '...' loading state)
+    return msg; 
+}
+document.getElementById('chatbot-input').addEventListener('keydown', function(e){
+    if(e.key === "Enter") sendChatbotMessage();
+});
+</script
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="airports-list.js"></script>
+<script>
+    // Toggle return date visibility based on trip type
+    function toggleReturnDate() {
+        const returnDateGroup = document.getElementById("return-date-group");
+        const tripType = document.getElementById("trip-type").value;
+        returnDateGroup.style.display = tripType === "round-trip" ? "block" : "none";
+    }
+
+    // Toggle dropdown visibility
+    function toggleDropdown() {
+        const dropdown = document.getElementById("dropdown-content");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Update travellers input field
+    function updateTravellers() {
+        const adults = parseInt(document.getElementById("adults-counter").value);
+        const children = parseInt(document.getElementById("children-counter").value);
+        const infants = parseInt(document.getElementById("infants-counter").value);
+        const travellerInput = document.getElementById("travellers");
+        travellerInput.value = `${adults} Adult${adults > 1 ? 's' : ''}, ${children} Child${children !== 1 ? 'ren' : ''}, ${infants} Infant${infants !== 1 ? 's' : ''}`;
+        toggleDropdown();
+    }
+
+    // Increment value for a given input field
+    function increaseValue(id) {
+        const input = document.getElementById(id);
+        input.value = parseInt(input.value) + 1;
+        updateTravellers();
+    }
+
+    // Decrement value for a given input field
+    function decreaseValue(id) {
+        const input = document.getElementById(id);
+        const min = parseInt(input.min);
+        if (parseInt(input.value) > min) {
+            input.value = parseInt(input.value) - 1;
+            updateTravellers();
+        }
+    }
+</script>
+
+<!-- FAQ section js-->
+<script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+
+        // Toggle active class
+        faqItem.classList.toggle('active');
+    });
+});
+</script>
+</html>
